@@ -1,0 +1,9 @@
+.git/**
+.vscode/**
+.gitignore
+scripts/**
+workspace/**
+settings.json
+keybindings.json
+extensions.json
+*.vsix

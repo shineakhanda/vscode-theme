@@ -1,0 +1,36 @@
+{
+  "name": "cave-dark-pro",
+  "displayName": "Cave Dark Pro",
+  "description": "An eye-comfort dark theme plus web-dev snippets by Shine (Cave Technologies).",
+  "version": "1.1.0",
+  "publisher": "shineakhanda",
+  "author": { "name": "Shine", "email": "shineert35@gmail.com", "url": "https://github.com/shineakhanda" },
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/shineakhanda/vscode-theme.git" },
+  "bugs": { "url": "https://github.com/shineakhanda/vscode-theme/issues" },
+  "homepage": "https://github.com/shineakhanda/vscode-theme#readme",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Themes", "Snippets"],
+  "keywords": ["theme", "dark", "dark theme", "snippets", "react", "web development", "cave"],
+  "galleryBanner": { "color": "#16171f", "theme": "dark" },
+  "contributes": {
+    "themes": [
+      { "label": "Cave Dark Pro", "uiTheme": "vs-dark", "path": "./themes/cave-dark-pro-color-theme.json" }
+    ],
+    "snippets": [
+      { "language": "html", "path": "./snippets/html.json" },
+      { "language": "css", "path": "./snippets/css.json" },
+      { "language": "scss", "path": "./snippets/css.json" },
+      { "language": "javascript", "path": "./snippets/javascript.json" },
+      { "language": "typescript", "path": "./snippets/javascript.json" },
+      { "language": "javascriptreact", "path": "./snippets/javascript.json" },
+      { "language": "typescriptreact", "path": "./snippets/javascript.json" },
+      { "language": "javascriptreact", "path": "./snippets/react.json" },
+      { "language": "typescriptreact", "path": "./snippets/react.json" }
+    ]
+  },
+  "scripts": {
+    "package": "npx --yes @vscode/vsce package",
+    "install-theme": "npx --yes @vscode/vsce package -o cave-dark-pro.vsix && code --install-extension cave-dark-pro.vsix --force"
+  }
+}

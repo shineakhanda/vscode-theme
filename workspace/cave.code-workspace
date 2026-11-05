@@ -1,0 +1,18 @@
+{
+  // Multi-root workspace template.
+  // Edit the "path" values to point at your own project folders
+  // (paths are relative to this file), then open it with
+  // File → Open Workspace from File…
+  "folders": [
+    { "name": "Frontend", "path": "../packages/frontend" },
+    { "name": "Backend", "path": "../packages/backend" },
+    { "name": "Docs", "path": "../docs" }
+  ],
+  "settings": {
+    "files.exclude": { "**/.DS_Store": true },
+    "search.exclude": { "**/docs/**/_build": true }
+  },
+  "extensions": {
+    "recommendations": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
+  }
+}

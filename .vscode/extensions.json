@@ -1,0 +1,52 @@
+{
+  "recommendations": [
+    // ── Web development ─────────────────────────────
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "ritwickdey.LiveServer",
+    "bradlc.vscode-tailwindcss",
+    "dsznajder.es7-react-js-snippets",
+    "yoavbls.pretty-ts-errors",
+    "xabikos.JavaScriptSnippets",
+
+    // ── Java ────────────────────────────────────────
+    "vscjava.vscode-java-pack",
+    "vmware.vscode-boot-dev-pack",
+
+    // ── C / C++ ─────────────────────────────────────
+    "ms-vscode.cpptools-extension-pack",
+    "ms-vscode.cmake-tools",
+
+    // ── C# / .NET ───────────────────────────────────
+    "ms-dotnettools.csdevkit",
+    "ms-dotnettools.csharp",
+    "k--kato.docomment",
+
+    // ── Python ──────────────────────────────────────
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.debugpy",
+    "ms-toolsai.jupyter",
+    "ms-python.black-formatter",
+    "charliermarsh.ruff",
+
+    // ── General (all languages) ─────────────────────
+    "eamodio.gitlens",
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "ms-vsliveshare.vsliveshare",
+    "ms-azuretools.vscode-docker",
+    "rangav.vscode-thunder-client",
+    "PKief.material-icon-theme",
+    "usernamehw.errorlens",
+    "oderwat.indent-rainbow",
+    "Gruntfuggly.todo-tree",
+    "aaron-bond.better-comments",
+    "alefragnani.Bookmarks",
+    "naumovs.color-highlight",
+    "mechatroner.rainbow-csv"
+  ]
+}

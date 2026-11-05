@@ -1,10 +1,36 @@
 {
   "Console Log": {
     "prefix": "clg",
-    "body": "console.log($1);"
+    "body": "console.log($1);",
+    "description": "console.log()"
+  },
+  "Console Log Labeled": {
+    "prefix": "clv",
+    "body": "console.log('${1:value}:', ${1:value});",
+    "description": "console.log with a label"
   },
   "Arrow Function": {
     "prefix": "afn",
-    "body": "const $1 = ($2) => {$3};"
+    "body": ["const ${1:name} = (${2}) => {", "  $0", "};"],
+    "description": "Arrow function"
+  },
+  "Async Arrow Function": {
+    "prefix": "aafn",
+    "body": ["const ${1:name} = async (${2}) => {", "  $0", "};"],
+    "description": "Async arrow function"
+  },
+  "Fetch JSON": {
+    "prefix": "fetchj",
+    "body": [
+      "const res = await fetch(${1:url});",
+      "if (!res.ok) throw new Error(`HTTP ${res.status}`);",
+      "const ${2:data} = await res.json();"
+    ],
+    "description": "fetch + status check + JSON parse"
+  },
+  "Try Catch": {
+    "prefix": "tryc",
+    "body": ["try {", "  $1", "} catch (${2:error}) {", "  console.error(${2:error});", "}"],
+    "description": "try/catch block"
   }
 }

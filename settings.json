@@ -15,8 +15,7 @@
     "**/build": true,
     "**/.git": true
   },
-  "files.maxMemoryForLargeFilesMB": 4096,
-  "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": 10,
 
   // ═════════════════════════════════════
@@ -30,7 +29,7 @@
   "editor.insertSpaces": true,
   "editor.wordWrap": "on",
   "editor.cursorBlinking": "expand",
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.smoothScrolling": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "selection",
@@ -38,6 +37,12 @@
   "editor.guides.bracketPairs": true,
   "editor.linkedEditing": true,
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
 
   // ═════════════════════════════════════
   // 🎨 WORKBENCH & THEME
@@ -66,5 +71,20 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
-  }
+  },
+
+  // ═════════════════════════════════════
+  // 🗂️ PER-LANGUAGE FORMATTERS
+  // ═════════════════════════════════════
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.tabSize": 4
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.tabSize": 4
+  },
+  "[c]": { "editor.defaultFormatter": "ms-vscode.cpptools", "editor.tabSize": 4 },
+  "[cpp]": { "editor.defaultFormatter": "ms-vscode.cpptools", "editor.tabSize": 4 },
+  "[csharp]": { "editor.defaultFormatter": "ms-dotnettools.csharp", "editor.tabSize": 4 }
 }
