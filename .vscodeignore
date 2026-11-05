@@ -2,6 +2,7 @@
 .vscode/**
 .gitignore
 scripts/**
+images/**
 workspace/**
 settings.json
 keybindings.json

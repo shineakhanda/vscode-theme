@@ -1,6 +1,8 @@
 # 🦇 Cave Dark Pro · VS Code Setup by Shine
 
-A clean, fast VS Code setup for web and multi-language development: a custom dark theme, ready-made snippets, tuned settings, handy shortcuts and a curated extension list you can install in one command.
+A clean, fast VS Code setup for web and multi-language development: a modern dark theme with its own file icons, ready-made snippets, tuned settings, handy shortcuts and a curated extension list you can install in one command.
+
+![Cave Dark Pro with Cave Icons](images/preview.png)
 
 Made and used daily by **Shine** ([@shineakhanda](https://github.com/shineakhanda)), founder of **Cave Technologies** — a Bangladesh-based digital agency for web development, business automation, custom CMS plugins and themes, and brand building. *(This project started life as the "Cave Web Solution" setup, Cave Technologies' earlier name.)*
 
@@ -10,10 +12,11 @@ Made and used daily by **Shine** ([@shineakhanda](https://github.com/shineakhand
 
 | | What | File |
 |---|---|---|
-| 🎨 | **Cave Dark Pro** — eye-comfort dark theme with full UI + semantic highlighting | `themes/` (packaged as an extension) |
+| 🎨 | **Cave Dark Pro** — calm, modern dark theme: one seamless surface, hairline borders, single accent | `themes/` |
+| 🗂️ | **Cave Icons** — 87 matching file & folder icons (React, TS, Python, configs, special folders…) | `icons/` |
 | ✂️ | **Snippets** for HTML, CSS/SCSS, JS/TS and React — bundled with the theme | `snippets/` |
-| 🧩 | **37 curated extensions** grouped by language, with one-command installers | `extensions.json`, `scripts/` |
-| ⚡ | **Tuned settings** — formatting on save, sensible excludes, JetBrains Mono | `settings.json` |
+| 🧩 | **36 curated extensions** grouped by language, with one-command installers | `extensions.json`, `scripts/` |
+| ⚡ | **Tuned settings** — formatting on save, sensible excludes, JetBrains Mono, UI polish | `settings.json` |
 | ⌨️ | **Shortcuts** for editing, navigation, terminal, debugging and GitLens | `keybindings.json` |
 | 🏢 | **Multi-root workspace** template | `workspace/cave.code-workspace` |
 
@@ -33,19 +36,25 @@ cd vscode-theme
 > - **Windows:** reinstall VS Code with **Add to PATH** ticked, then open a new terminal.
 > - **Linux:** it's installed with the `.deb`/`.rpm` package automatically.
 
-### 1. Install the Cave Dark Pro theme + snippets
+### 1. Install the theme and icons
 
 **Option A — download the ready-made file (easiest)**
-1. Open the [Releases](https://github.com/shineakhanda/vscode-theme/releases) page and download `cave-dark-pro-x.x.x.vsix`.
+1. Open the [Releases](https://github.com/shineakhanda/vscode-theme/releases) page and download one file:
+   - `cave-dark-pro-theme-only-x.x.x.vsix` — theme + icons only
+   - `cave-dark-pro-x.x.x.vsix` — theme + icons + snippets
 2. In VS Code open the Extensions view (`Ctrl+Shift+X`), click **⋯** (top-right) → **Install from VSIX…** and pick the file.
 
-**Option B — build it yourself**
+**Option B — build it yourself** (needs Python 3, no npm required)
 ```bash
-npm run install-theme
+python scripts/build-vsix.py --theme-only   # or without the flag to include snippets
+code --install-extension cave-dark-pro-theme-only-1.2.0.vsix
 ```
-This packages the extension with [`vsce`](https://github.com/microsoft/vscode-vsce) and installs it into VS Code.
 
-Then press `Ctrl+K` `Ctrl+T` (macOS: `Cmd+K` `Cmd+T`) and choose **Cave Dark Pro**.
+Then turn them on — no restart needed:
+- **Color theme:** `Ctrl+K` `Ctrl+T` → **Cave Dark Pro**
+- **File icons:** `Ctrl+Shift+P` → **Preferences: File Icon Theme** → **Cave Icons**
+
+(macOS: use `Cmd` instead of `Ctrl`.) Installing a new `.vsix` over an old one just updates it — no need to uninstall first.
 
 > ⚠️ Copying the theme `.json` straight into `~/.vscode/extensions` (the old method) does **not** work — VS Code needs an extension manifest, which is why the theme is now a proper extension.
 
@@ -78,6 +87,8 @@ Already-installed extensions are skipped, so it's safe to re-run. Only need some
 Opening this repo folder in VS Code will also show a **"Install recommended extensions"** prompt.
 
 ### 4. Apply the settings
+The settings include a **UI polish** block that pairs with the theme: command center in the title bar, roomier file tree with indent guides, sticky scroll, a thicker cursor, top padding in the editor, and quieter inlay hints (hold `Ctrl+Alt` to show them). Take the whole file or just that block.
+
 1. `Ctrl+Shift+P` → **Preferences: Open User Settings (JSON)**
 2. **Back up** what's there, then paste the contents of `settings.json` (or merge the parts you like).
 3. Save. Settings take effect immediately.
@@ -134,7 +145,7 @@ On macOS, use `Cmd` in place of `Ctrl` and `Option` in place of `Alt`.
 - **C / C++:** C/C++ Extension Pack, CMake Tools
 - **C# / .NET:** C# Dev Kit, C#, DocComment
 - **Python:** Python, Pylance, Debugpy, Jupyter, Black, Ruff
-- **General:** GitLens, Copilot + Chat, Live Share, Docker, Thunder Client, Material Icons, Error Lens, Indent Rainbow, Todo Tree, Better Comments, Bookmarks, Color Highlight, Rainbow CSV
+- **General:** GitLens, Copilot + Chat, Live Share, Docker, Thunder Client, Error Lens, Indent Rainbow, Todo Tree, Better Comments, Bookmarks, Color Highlight, Rainbow CSV
 
 ---
 
@@ -159,7 +170,8 @@ On macOS, use `Cmd` in place of `Ctrl` and `Option` in place of `Alt`.
 
 | Problem | Fix |
 |---|---|
-| **Cave Dark Pro** doesn't appear in the theme list | Install the `.vsix` (step 1), then **Developer: Reload Window**. |
+| **Cave Dark Pro** or **Cave Icons** doesn't appear in the list | Install the `.vsix` (step 1), then **Developer: Reload Window**. |
+| Icons show but some files use a generic icon | Only common file types have custom icons. Open an issue with the file name and it can be added. |
 | `code: command not found` | See the PATH note under **Quick start**. |
 | Font looks unchanged | Install JetBrains Mono for all users and fully restart VS Code. |
 | Formatter doesn't run on save | Install Prettier (and Black for Python), then check the file's language mode in the status bar. |
@@ -170,10 +182,11 @@ On macOS, use `Cmd` in place of `Ctrl` and `Option` in place of `Alt`.
 ```
 vscode-theme/
 ├── package.json              # extension manifest (theme + snippets)
-├── themes/cave-dark-pro-color-theme.json
+├── themes/                   # color theme + icon theme mapping
+├── icons/                    # Cave Icons SVGs
 ├── snippets/                 # html, css, javascript, react
 ├── extensions.json           # curated extension list
-├── scripts/                  # install-extensions.sh / .ps1
+├── scripts/                  # extension installers + build-vsix.py
 ├── settings.json
 ├── keybindings.json
 └── workspace/cave.code-workspace
@@ -181,7 +194,7 @@ vscode-theme/
 
 ## 🤝 Contributing
 
-Issues and pull requests are welcome. To change the theme, edit `themes/cave-dark-pro-color-theme.json`, run `npm run install-theme`, then **Developer: Reload Window** to see the result. Please note changes in `CHANGELOG.md`.
+Issues and pull requests are welcome. To change the theme, edit `themes/cave-dark-pro-color-theme.json` (colors) or `themes/cave-icons.json` + `icons/` (file icons), rebuild with `python scripts/build-vsix.py`, install the `.vsix`, then **Developer: Reload Window** to see the result. Please note changes in `CHANGELOG.md`.
 
 ## 👤 Author
 
