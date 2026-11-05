@@ -48,28 +48,9 @@
   // 🎨 WORKBENCH & THEME
   // ═════════════════════════════════════
   "workbench.colorTheme": "Cave Dark Pro",
-  "workbench.iconTheme": "cave-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.location": "bottom",
   "workbench.startupEditor": "none",
-
-  // ═════════════════════════════════════
-  // ✨ UI POLISH (pairs with Cave Dark Pro)
-  // ═════════════════════════════════════
-  "window.commandCenter": true,
-  "workbench.layoutControl.enabled": false,
-  "workbench.tree.indent": 14,
-  "workbench.tree.renderIndentGuides": "always",
-  "explorer.compactFolders": false,
-  "editor.padding.top": 10,
-  "editor.cursorWidth": 2,
-  "editor.renderLineHighlight": "all",
-  "editor.stickyScroll.enabled": true,
-  "editor.guides.highlightActiveIndentation": true,
-  "editor.semanticHighlighting.enabled": true,
-  "editor.inlayHints.enabled": "offUnlessPressed",
-  "breadcrumbs.enabled": true,
-  "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.cursorBlinking": true,
 
   // ═════════════════════════════════════
   // 🖥️ TERMINAL

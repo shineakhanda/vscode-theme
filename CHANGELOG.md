@@ -1,9 +1,11 @@
 # Changelog
 
+## 1.2.1 — 2026-11-06
+- Restored the previous `settings.json` (removed the "UI polish" block) and Material Icon Theme as the default icon theme. Cave Icons stays available to pick manually.
+
 ## 1.2.0 — 2026-11-06
 - **Modern look:** sidebar, tabs, panels and status bar share one seamless surface with hairline borders; underline active tab; quiet status bar; raised, shadowed popups; softer selections and line highlight.
 - **New: Cave Icons** file icon theme — 87 icons for languages, configs, lock/env/git files and special folders (src, components, assets, tests, dist, node_modules…).
-- Optional "UI polish" block in `settings.json`; Cave Icons replaces Material Icon Theme in the defaults.
 - `scripts/build-vsix.py` packages the extension without npm; `--theme-only` leaves out snippets.
 
 ## 1.1.0 — 2026-11-06

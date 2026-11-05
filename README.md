@@ -15,8 +15,8 @@ Made and used daily by **Shine** ([@shineakhanda](https://github.com/shineakhand
 | 🎨 | **Cave Dark Pro** — calm, modern dark theme: one seamless surface, hairline borders, single accent | `themes/` |
 | 🗂️ | **Cave Icons** — 87 matching file & folder icons (React, TS, Python, configs, special folders…) | `icons/` |
 | ✂️ | **Snippets** for HTML, CSS/SCSS, JS/TS and React — bundled with the theme | `snippets/` |
-| 🧩 | **36 curated extensions** grouped by language, with one-command installers | `extensions.json`, `scripts/` |
-| ⚡ | **Tuned settings** — formatting on save, sensible excludes, JetBrains Mono, UI polish | `settings.json` |
+| 🧩 | **37 curated extensions** grouped by language, with one-command installers | `extensions.json`, `scripts/` |
+| ⚡ | **Tuned settings** — formatting on save, sensible excludes, JetBrains Mono | `settings.json` |
 | ⌨️ | **Shortcuts** for editing, navigation, terminal, debugging and GitLens | `keybindings.json` |
 | 🏢 | **Multi-root workspace** template | `workspace/cave.code-workspace` |
 
@@ -87,8 +87,6 @@ Already-installed extensions are skipped, so it's safe to re-run. Only need some
 Opening this repo folder in VS Code will also show a **"Install recommended extensions"** prompt.
 
 ### 4. Apply the settings
-The settings include a **UI polish** block that pairs with the theme: command center in the title bar, roomier file tree with indent guides, sticky scroll, a thicker cursor, top padding in the editor, and quieter inlay hints (hold `Ctrl+Alt` to show them). Take the whole file or just that block.
-
 1. `Ctrl+Shift+P` → **Preferences: Open User Settings (JSON)**
 2. **Back up** what's there, then paste the contents of `settings.json` (or merge the parts you like).
 3. Save. Settings take effect immediately.
@@ -145,7 +143,7 @@ On macOS, use `Cmd` in place of `Ctrl` and `Option` in place of `Alt`.
 - **C / C++:** C/C++ Extension Pack, CMake Tools
 - **C# / .NET:** C# Dev Kit, C#, DocComment
 - **Python:** Python, Pylance, Debugpy, Jupyter, Black, Ruff
-- **General:** GitLens, Copilot + Chat, Live Share, Docker, Thunder Client, Error Lens, Indent Rainbow, Todo Tree, Better Comments, Bookmarks, Color Highlight, Rainbow CSV
+- **General:** GitLens, Copilot + Chat, Live Share, Docker, Thunder Client, Material Icons, Error Lens, Indent Rainbow, Todo Tree, Better Comments, Bookmarks, Color Highlight, Rainbow CSV
 
 ---
 
