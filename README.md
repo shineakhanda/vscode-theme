@@ -198,7 +198,7 @@ Issues and pull requests are welcome. To change the theme, edit `themes/cave-dar
 
 **Shine** — founder of Cave Technologies
 - GitHub: [@shineakhanda](https://github.com/shineakhanda)
-- Email: [shineert35@gmail.com](mailto:shineert35@gmail.com)
+- Email: [me@shineakhanda.dev](mailto:me@shineakhanda.dev)
 
 ## 📄 License
 
